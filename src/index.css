@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #0F3A23;
+  --color-primary-hover: #154D30;
+  --color-primary-dark: #0A2617;
+  --color-primary-light: #1A5E39;
+  --color-cream: #FAF6F0;
+  --color-cream-bg: #F5EFEB;
+  --color-cream-border: #E2D9CC;
+}
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cinzel", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Official Primary Brand Green — Exact HEX #0F3A23 */
+  --color-primary: #0F3A23;
+  --color-primary-hover: #154D30;
+  --color-primary-dark: #0A2617;
+  --color-primary-light: #1A5E39;
+
+  /* Deep Forest Brand Greens */
+  --color-forest-950: #0A2617;
+  --color-forest-900: #0F3A23;
+  --color-forest-800: #154D30;
+  --color-forest-700: #1A5E39;
+  --color-forest-600: #257D50;
+  --color-forest-100: #E6F0EB;
+  --color-forest-50: #F0F6F3;
+
+  /* Warm Bakery Ivory & Cream */
+  --color-cream-50: #FAF6F0;
+  --color-cream-100: #F5EFEB;
+  --color-cream-200: #ECE4D8;
+  --color-cream-300: #E2D9CC;
+
+  /* Soft Warm Oatmeal & Sand */
+  --color-sand-200: #E8DFD1;
+  --color-sand-300: #D8CBB9;
+  --color-sand-400: #C2B39E;
+
+  /* Rich Espresso & Warm Walnut */
+  --color-espresso-700: #54392B;
+  --color-espresso-800: #3D271D;
+  --color-espresso-900: #291811;
+
+  /* Primary Deep Text */
+  --color-charcoal-900: #162820;
+  --color-charcoal-800: #23342C;
+  --color-charcoal-700: #2F3E37;
+
+  /* Muted Olive Sage */
+  --color-olive-600: #6E776F;
+  --color-olive-500: #858E86;
+
+  /* Restrained Warm Honey Gold */
+  --color-gold-400: #D4A359;
+  --color-gold-500: #C99742;
+  --color-gold-600: #B88738;
+
+  /* Backward Compatibility Token Aliases */
+  --color-turquoise-500: #0F3A23;
+  --color-turquoise-600: #154D30;
+  --color-turquoise-700: #1A5E39;
+  --color-turquoise-100: #E6F0EB;
+  --color-teal-800: #0F3A23;
+  --color-teal-900: #0A2617;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #F5EFEB;
+  color: #162820;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 700;
+}
+
+.font-serif {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.font-display {
+  font-family: "Cinzel", "Cormorant Garamond", Georgia, serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Subtle Editorial Animations */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-hero-fade {
+  animation: heroFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-scale {
+  animation: heroScaleIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-fade,
+  .animate-hero-scale {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
